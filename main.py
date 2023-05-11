@@ -65,7 +65,7 @@ class Actions(QObject):
             this.viewWin.setProperty("error", "Đang tìm caption")
             app.processEvents()
             subprocess.Popen([chromePath, soundPath])
-            time.sleep(4.0)
+            time.sleep(6.0)
             if not this.findCaptionWindow():
                 raise Exception("Không tìm thấy chrome caption")
             this.ce.clearContentTxt()
@@ -74,7 +74,7 @@ class Actions(QObject):
             if countScan == 0:
                 raise Exception("Không tìm thấy caption phù hợp")
             subprocess.Popen([chromePath, soundContentPath])
-            time.sleep(2.0)
+            time.sleep(4.0)
             this.ce.evalScript("scanTwo()")
             address = int(this.ce.waitContent())
             if address == 0:
