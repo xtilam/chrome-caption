@@ -130,7 +130,7 @@ class Actions(QObject):
     def hideCaption(this):
         if not this.isValidWin() or not this.findCaptionWindow():
             return False
-        this.win.hide()
+        # this.win.hide()
         this.win.moveTo(-9999, 0)
         return True
     

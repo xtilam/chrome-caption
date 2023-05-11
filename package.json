@@ -7,6 +7,7 @@
     "nodemon": "^2.0.22"
   },
   "scripts": {
-    "start": "nodemon --exec \"main.py\" --ext \".py,.qml,.lua\""
+    "start": "nodemon --exec \"python main.py\" --ext \".py,.qml,.lua\"",
+    "run": "python main.py"
   }
 }
